@@ -2,7 +2,7 @@ import requests
 import random
 import re
 from config import male_names, female_names
-from transliterate import translit
+#from transliterate import translit
 
 def get_wp_nonce():
 
@@ -205,21 +205,21 @@ def get_random_yaroslavl_address():
     # Возврат случайного адреса из списка
     return random.choice(get_random_yaroslavl_address.addresses)
 
-def generate_email(name: str):
-    # Трансляция имени на латиницу
-    name_lat = translit(name, 'ru', reversed=True)
-
-    # Генерация случайного года рождения в диапазоне от 1960 до 2005
-    birth_year = random.randint(1960, 2005)
-
-    # Список доступных доменов
-    domains = ['mail.ru', 'gmail.com', 'yandex.ru', 'rambler.ru', 'list.ru', 'vk.com', 'yahoo.com']
-
-    # Генерация случайного домена
-    domain = random.choice(domains)
-
-    # Формирование email-адреса
-    email = f"{name_lat.lower()}{birth_year}@{domain}"
-
-    return email
+# def generate_email(name: str):
+#     # Трансляция имени на латиницу
+#     name_lat = translit(name, 'ru', reversed=True)
+#
+#     # Генерация случайного года рождения в диапазоне от 1960 до 2005
+#     birth_year = random.randint(1960, 2005)
+#
+#     # Список доступных доменов
+#     domains = ['mail.ru', 'gmail.com', 'yandex.ru', 'rambler.ru', 'list.ru', 'vk.com', 'yahoo.com']
+#
+#     # Генерация случайного домена
+#     domain = random.choice(domains)
+#
+#     # Формирование email-адреса
+#     email = f"{name_lat.lower()}{birth_year}@{domain}"
+#
+#     return email
 
