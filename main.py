@@ -14,7 +14,6 @@ def run_task():
     # Get new Word press once code
     nonce_code = get_wp_nonce()
 
-    count = 1
 
     # Get new random dish
     dish_id = random.choice(list(dishes.keys()))
@@ -66,6 +65,7 @@ def run_task():
     print()
 
 while True:
+    count = 1
     run_task()
     time.sleep(30)
 
