@@ -1,8 +1,8 @@
 
 # Main URL
-#url = 'https://ylilit.ru/wp-admin/admin-ajax.php'
+url = 'https://ylilit.ru/wp-admin/admin-ajax.php'
 #url = 'http://10.100.7.95:5000/submit'
-url = 'http://178.208.91.155:8081/submit'
+#url = 'http://178.208.91.155:8081/submit'
 
 
 # HTTP headers
