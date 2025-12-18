@@ -14,6 +14,8 @@ def run_task():
     # Get new Word press once code
     nonce_code = get_wp_nonce()
 
+    count = 1
+
     # Get new random dish
     dish_id = random.choice(list(dishes.keys()))
     dish_name = dishes[dish_id][0]
@@ -53,7 +55,9 @@ def run_task():
         'cart': cart_json
     }
 
-    print(name, phone, email, address, dish_name, dish_value, dish_price, nonce_code)
+    print(count, name, phone, email, address, dish_name, dish_value, dish_price, nonce_code)
+
+    count+=1
 
     # Make request and get responce
     responce = requests.post(url, headers=headers, cookies=my_cookies, data=data)
