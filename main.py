@@ -67,5 +67,5 @@ while True:
     print(f"Task: {count}")
     run_task()
     count+=1
-    time.sleep(30)
+    time.sleep(15)
 
