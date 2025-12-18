@@ -54,9 +54,7 @@ def run_task():
         'cart': cart_json
     }
 
-    print(count, name, phone, email, address, dish_name, dish_value, dish_price, nonce_code)
-
-    count+=1
+    print(name, phone, email, address, dish_name, dish_value, dish_price, nonce_code)
 
     # Make request and get responce
     responce = requests.post(url, headers=headers, cookies=my_cookies, data=data)
@@ -64,10 +62,10 @@ def run_task():
     print(responce.status_code, responce.json())
     print()
 
+count = 1
 while True:
-    count = 1
+    print(f"Task: {count}")
     run_task()
+    count+=1
     time.sleep(30)
-
-
 
