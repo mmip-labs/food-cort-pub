@@ -3,7 +3,7 @@ import json
 import random
 from config import headers, my_cookies, url
 from functions import get_wp_nonce, generate_phone_number, make_menu, generate_random_email
-from functions import random_russian_name, get_random_yaroslavl_address, generate_email
+from functions import random_russian_name, get_random_yaroslavl_address
 import time
 
 # Generate dishes list
