@@ -57,10 +57,13 @@ def run_task():
     print(name, phone, email, address, dish_name, dish_value, dish_price, nonce_code)
 
     # Make request and get responce
-    responce = requests.post(url, headers=headers, cookies=my_cookies, data=data)
-
-    print(responce.status_code, responce.json())
-    print()
+    try:
+        responce = requests.post(url, headers=headers, cookies=my_cookies, data=data, timeout=10)
+    except:
+        print("Connection error...")
+    else:
+        print(responce.status_code, responce.json())
+        print()
 
 count = 1
 while True:
