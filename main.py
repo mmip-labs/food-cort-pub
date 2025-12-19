@@ -74,9 +74,9 @@ count = 0
 
 while True:
     print(f"Task: {count}")
-    if count % 2 == 0:
+    if count % 10 == 0:
         nonce_code = get_wp_nonce()
-        print("NEW!")
+        print("Code updated!")
     run_task(nonce_code)
     count+=1
     time.sleep(15)
