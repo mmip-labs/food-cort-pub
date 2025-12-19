@@ -31,8 +31,12 @@ def run_task():
         dish_price]
     }
 
-
-    cart_json = json.dumps(cart).encode('utf8')
+    try:
+        cart_json = json.dumps(cart).encode('utf8')
+    except:
+        cart = {"cart[4637]": [3, "https://ylilit.ru/wp-content/uploads/2023/11/Kebab-v-lavashe.webp", "300",
+                        "Кебаб с тертым сыром в лаваше .(Фирменное блюдо)", "385"]}
+        cart_json = json.dumps(cart).encode('utf8')
 
     # Get random name
     name = random_russian_name()
