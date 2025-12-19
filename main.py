@@ -9,10 +9,10 @@ import time
 # Generate dishes list
 dishes = make_menu()
 
-def run_task():
+def run_task(wp_nonce_code):
 
     # Get new Word press once code
-    nonce_code = get_wp_nonce()
+    nonce_code = wp_nonce_code
 
 
     # Get new random dish
@@ -69,10 +69,15 @@ def run_task():
         print(responce.status_code, responce.json())
         print()
 
-count = 1
+count = 0
+#nonce_code = get_wp_nonce()
+
 while True:
     print(f"Task: {count}")
-    run_task()
+    if count % 2 == 0:
+        nonce_code = get_wp_nonce()
+        print("NEW!")
+    run_task(nonce_code)
     count+=1
     time.sleep(15)
 
