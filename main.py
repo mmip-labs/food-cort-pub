@@ -79,5 +79,5 @@ while True:
         print("Code updated!")
     run_task(nonce_code)
     count+=1
-    time.sleep(15)
+    time.sleep(10)
 
