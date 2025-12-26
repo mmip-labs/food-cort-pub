@@ -45,7 +45,7 @@ def run_task(wp_nonce_code):
     # Get random email
     email = generate_random_email()
     # Get random address
-    address = get_random_yaroslavl_address()
+    address = f"{get_random_yaroslavl_address()} Сорян, мужики, что добавил вам работы. Ничего личного."
 
     # Form new order
     data = {
