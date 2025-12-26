@@ -18,9 +18,9 @@ def run_task(wp_nonce_code):
     # Get new random dish
     dish_id = random.choice(list(dishes.keys()))
     dish_name = dishes[dish_id][0]
-    dish_value = int(dishes[dish_id][1])
+    dish_value = dishes[dish_id][1]
     dish_img = dishes[dish_id][2]
-    dish_price = int(dishes[dish_id][3])
+    dish_price = dishes[dish_id][3]
 
     cart = {
         f"cart[{dish_id}]":
