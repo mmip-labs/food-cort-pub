@@ -11,7 +11,7 @@ def get_wp_nonce2():
     url = "https://ylilit.ru"
 
     str_encoded = "Ci8qIDwhW0NEQVRBWyAqLwp2YXIgZGF0YUFqYXggPSB7InVybCI6Imh0dHBzOi8veWxpbGl0LnJ1L3dwLWFkbWluL2FkbWluL" \
-                  "WFqYXgucGhwIiwibm9uY2UiOiIyOTIyZjZmMGVhIn07Ci8vIyBzb3VyY2VVUkw9Y2FydC1qcy1leHRyYQovKiBdXT4gKi8K"
+                  "WFqYXgucGhwIiwibm9uY2UiOiI4MjZjNmE1NTJiIn07Ci8vIyBzb3VyY2VVUkw9Y2FydC1qcy1leHRyYQovKiBdXT4gKi8"
 
     # 2. Send an HTTP GET request to the URL
     response = requests.get(url)

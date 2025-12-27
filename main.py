@@ -68,7 +68,7 @@ def run_task(wp_nonce_code):
     except:
         print("Connection error...")
     else:
-        print(responce.status_code, responce.json())
+        print(responce.status_code, responce.text)
         print()
 
 count = 0
