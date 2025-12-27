@@ -47,7 +47,7 @@ def run_task(wp_nonce_code):
     # Get random address
     #address = get_random_yaroslavl_address()
 
-    address = "Извинитесь перед учителем, которого вы оскорбили и все прекратится."
+    address = "Извинитесь перед учителем и другими людьми, которорых вы оскорбили и все прекратится."
 
     # Form new order
     data = {
