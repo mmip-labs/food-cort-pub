@@ -3,7 +3,34 @@ import random
 import re
 from config import male_names, female_names
 import base64
+import time
 
+def get_cookies_from_cart():
+    """
+    Заходит на страницу корзины https://ylilit.ru/cart
+    и выводит все cookies, полученные от сайта.
+    """
+    url = "https://ylilit.ru"
+
+    # Создаём сессию (чтобы cookies сохранялись)
+    session = requests.Session()
+
+
+    # Выполняем GET-запрос
+    response = session.get(url)
+
+    # Проверяем успешность запроса
+    response.raise_for_status()
+
+    if session.cookies:
+        for name, value in session.cookies.items():
+            cookie = session.cookies.get_dict().get(name)
+            # Получаем дополнительные атрибуты, если доступны
+            jar = session.cookies
+            for c in jar:
+                cookie_vaulue = c.value
+
+    return cookie_vaulue.split("-")[-1]
 
 def get_wp_nonce2():
 

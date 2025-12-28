@@ -3,7 +3,7 @@ import json
 import random
 from config import headers, my_cookies, url
 from functions import get_wp_nonce2, generate_phone_number, make_menu, generate_random_email
-from functions import random_russian_name, get_random_yaroslavl_address
+from functions import random_russian_name, get_random_yaroslavl_address, get_cookies_from_cart
 import time
 
 # Generate dishes list
@@ -58,8 +58,13 @@ def run_task(wp_nonce_code):
         'cart': cart_json
     }
 
-    print(name, phone, email, address, dish_name, dish_value, dish_price, nonce_code)
-    print(data)
+    not_bot_cooke = get_cookies_from_cart()
+    my_cookies['icwp-wpsf-notbot'] = f'notbotZaltchaZexp-{not_bot_cooke}'
+
+
+    print(my_cookies)
+    # print(name, phone, email, address, dish_name, dish_value, dish_price, nonce_code)
+    # print(data)
 
 
     # Make request and get responce

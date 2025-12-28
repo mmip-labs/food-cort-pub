@@ -1,4 +1,3 @@
-
 # Main URL
 url = 'https://ylilit.ru/wp-admin/admin-ajax.php'
 #url = 'http://10.100.7.95:5000/submit'
