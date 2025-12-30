@@ -13,9 +13,12 @@ headers = {
     'origin': 'https://ylilit.ru',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': 'Windows',
-    'sec-fetch-dest': 'empty',
+    'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin'
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1'
+
 }
 
 # Http cookies

@@ -3,7 +3,7 @@ import requests
 
 def get_cookies_from_cart():
     """
-    Заходит на страницу корзины https://ylilit.ru/cart
+    Заходит на страницу корзины https://ylilit.ru
     и выводит все cookies, полученные от сайта.
     """
     url = "https://ylilit.ru/cart"
