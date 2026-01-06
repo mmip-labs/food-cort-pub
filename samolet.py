@@ -1,5 +1,5 @@
 import requests
-from config_samolet import headers, my_cookies, russian_obscene_expressions_with_plane
+from config_samolet import headers, my_cookies, url, russian_obscene_expressions_with_plane
 from functions import get_wp_nonce, generate_phone_number, make_menu, generate_random_email
 from functions import random_russian_name, get_random_yaroslavl_address
 import time
@@ -35,7 +35,7 @@ def run_task():
     print(data)
 
 
-    Make request and get responce
+    #Make request and get responce
     try:
         responce = requests.post(url, headers=headers, data=data, timeout=20)
     except:
