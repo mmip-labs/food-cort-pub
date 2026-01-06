@@ -35,14 +35,14 @@ def run_task():
     print(data)
 
 
-    # Make request and get responce
-    # try:
-    #     responce = requests.post(url, headers=headers, data=data, timeout=20)
-    # except:
-    #     print("Connection error...")
-    # else:
-    #     print(responce.status_code, responce.text)
-    #     print()
+    Make request and get responce
+    try:
+        responce = requests.post(url, headers=headers, data=data, timeout=20)
+    except:
+        print("Connection error...")
+    else:
+        print(responce.status_code, responce.text)
+        print()
 
 count = 0
 
