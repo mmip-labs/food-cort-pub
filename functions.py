@@ -32,7 +32,7 @@ def get_cookies_from_cart():
 
     return cookie_vaulue.split("-")[-1]
 
-def get_wp_nonce2():
+def get_wp_nonce():
 
     # 1. Define the URL
     url = "https://ylilit.ru"
@@ -68,28 +68,6 @@ def get_wp_nonce2():
                         nonce = match2.group(1)
                         return nonce
 
-
-def get_wp_nonce():
-
-    # 1. Define the URL
-    url = 'https://ylilit.ru'
-
-    # 2. Send an HTTP GET request to the URL
-    response = requests.get(url)
-
-    # 3. Check if the request was successful (optional but recommended)
-    if response.status_code == 200:
-        # 4. Access the page content as a string (decoded Unicode)
-        page_content_text = response.text
-
-        for i in page_content_text.split(" "):
-            if "admin-ajax.php" in i:
-                #print(i)
-                j = i.replace('/*','').replace("{","").replace("}","").replace(";","").split(",")[1].\
-                    strip().split(":")[1].replace("\"","")
-                break
-
-    return str(j)
 
 def generate_phone_number():
     # Генерируем случайные числа для телефона
@@ -288,4 +266,25 @@ def get_random_yaroslavl_address():
 #     email = f"{name_lat.lower()}{birth_year}@{domain}"
 #
 #     return email
+
+def get_token():
+
+    # 1. Define the URL
+    url = "https://ylilit.ru/cart"
+
+
+    # 2. Send an HTTP GET request to the URL
+    response = requests.get(url)
+
+    # 3. Check if the request was successful (optional but recommended)
+    if response.status_code == 200:
+        # 4. Access the page content as a string (decoded Unicode)
+        page_content_text = response.text
+
+        for i in page_content_text.split(" "):
+            pattern = r'sitekey="(.*)"'
+            match = re.search(pattern, i)
+            if match:
+                token_str = match.group(1)
+                return token_str
 
