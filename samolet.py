@@ -1,5 +1,5 @@
 import requests
-from config_samolet import headers, my_cookies, url, russian_obscene_expressions_with_plane
+from config_samolet import headers, my_cookies, url, russian_obscene_expressions_censored
 from functions import get_wp_nonce, generate_phone_number, make_menu, generate_random_email
 from functions import random_russian_name, get_random_yaroslavl_address
 import time
@@ -28,7 +28,7 @@ def run_task():
         'name': f'{name}',
         'phone': f'{phone}',
         'email': f'{email}',
-        'comment': f'{random.choice(russian_obscene_expressions_with_plane)}',
+        'comment': f'{random.choice(russian_obscene_expressions_censored)}',
         'theme': f'{theme}'
     }
 
